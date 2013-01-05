@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Demo for Key-Value Json Input jQuery Plugin</title>
+        <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="jquery.kv-json-input.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <form id="custom-server-form" action="" method="POST">
+                        <legend>Demo for Key-Value Json Input jQuery Plugin</legend>
+                        
+						<input type="input" name="serverConfig" id="server-config-data" value="{&quot;domain&quot;:&quot;www.lovelucy.info&quot;}" />
+						
+                        <div class="form-actions">
+                            <button type="submit" class="btn" id="save">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+			<div class="row">
+				<div class="span12">
+					<strong>Code</strong>
+					<pre>
+&lt;form id=&quot;custom-server-form&quot; action=&quot;&quot; method=&quot;POST&quot;&gt;
+  &lt;legend&gt;Demo for Key-Value Json Input jQuery Plugin&lt;/legend&gt;
+
+  &lt;input type=&quot;input&quot; name=&quot;serverConfig&quot; id=&quot;server-config-data&quot; value=&quot;{&amp;quot;domain&amp;quot;:&amp;quot;www.lovelucy.info&amp;quot;}&quot; /&gt;
+
+  &lt;div class=&quot;form-actions&quot;&gt;
+    &lt;button type=&quot;submit&quot; class=&quot;btn&quot; id=&quot;save&quot;&gt;Submit&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+
+&lt;script&gt;
+  $(function() {
+    $('#server-config-data').kvJsonInput();
+  });
+&lt;/script&gt;
+					</pre>
+				</div>
+			</div>
+        </div>
+		
+		<script>
+			$(function() {
+				$('#server-config-data').kvJsonInput();
+			});
+		</script>
+    </body>
+</html>
+
