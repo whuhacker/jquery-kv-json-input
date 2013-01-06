@@ -7,7 +7,7 @@
  * @license    GPL Version 2 (or later version) licenses.
  * @version    0.1
  */
-(function ($) {
+;(function ($) {
 	var methods = {
 		init: function(options){
 			var settings = $.extend({}, $.fn.kvJsonInput.defaults, options || {});
