@@ -5,7 +5,7 @@
  * @copyright  UDomain Web Hosting Company Limited
  * @date       Dec 19, 2012
  * @license    GPL Version 2 (or later version) licenses.
- * @version    0.1
+ * @version    0.2
  */
 ;(function ($) {
 	var methods = {
@@ -96,7 +96,7 @@
 			$table.find('tbody tr').not('.'+settings.templateClass).each(function(){
 				params[$(this).find('input.'+settings.keyInputClass).val()] = $(this).find('input.'+settings.valueInputClass).val();
 			});
-			return $(this).val(JSON.stringify(params));
+			return $(this).val(JSON.stringify(params)).trigger('change');
 		}
 				
 	};
