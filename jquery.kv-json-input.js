@@ -13,7 +13,7 @@
 			var settings = $.extend({}, $.fn.kvJsonInput.defaults, options || {});
 			return this.each(function () {
 				var $input = $(this);
-				settings.initData = $.parseJSON($input.val());
+				settings.initData = $.parseJSON($input.val() || '{}');
 				$input.kvJsonInput('setupHtml', settings);
 				$input.kvJsonInput('initData', settings);
 				$(document).on('click.kv-table', '.'+settings.addRowTriggerClass, function(){
